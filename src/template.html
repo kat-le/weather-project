@@ -5,5 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="left">
+        <div class="form-container">
+          <form class="weather-form" id="weather-form">
+            <input class="city-input" type="text" placeholder="Enter city, ZIP code, or address"></input>
+            <button class="submit-btn" id="submit-btn" type="submit">Search</button>
+          </form>
+        </div>
+        <div class="location-img"></div>
+        <div class="current-weather">
+          <div class="curr-weather-card">
+            <div class="curr-weather-temp">
+              <div class="temp">
+                <h1 class="temp">86</h1>
+                <p class="unit">&deg;F</p>
+              </div>
+              <img class="weather-icon"></img>
+              <p class="feelslike">Feels like: 90</p>
+            </div>
+            <p class="location">San Jose, CA, United States</p>
+            <p class="timezone">America/Los Angelos</p>
+            <div class="wind-humidity">
+              <p>Wind speed: 4km |</p>
+              <p>Humidity: 20%</p>
+            </div>
+          </div>
+          <div class="curr-info-section">
+            <div class="sun">
+              <p class="sunrise">Sunrise: 6:00 am</p>
+              <p class="sunset">Sunset: 8:00 pm </p>
+            </div>
+            <div class="uv-index">UV Index: 10</div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="hourly-card">
+          <p class="desc">Description</p>
+          <div class="hourly-container"></div>
+        </div>
+        <div class="forecast-card">
+          <p>10 Day Forecast</p>
+          <div class="forecast-container"></div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
