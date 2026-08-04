@@ -13,7 +13,6 @@
 }
 
 .hour-card img{
-    border: 1px solid;
     width: 30px;
     height: 30px;
 }
@@ -36,7 +35,6 @@
 .forecast-item img {
     width: 25px;
     height: 25px;
-    border: 1px solid;
 }
 
 .bar {

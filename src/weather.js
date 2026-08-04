@@ -1,25 +1,24 @@
 import sampleData from "./sampleWeather.js"
 
- 
-//   async function getWeatherData(location) {
-//     try {
-//       const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=BTMS2DH3MC5HHK8DRPV3GK5RZ&include=alerts,current,hours`);
+  async function getWeatherData(location, unit) {
+    try {
+      const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=${unit}&iconSet=icons2&key=BTMS2DH3MC5HHK8DRPV3GK5RZ&include=alerts,current,hours`);
 
-//     if (!response.ok) {
-//       throw new Error(`HTTP error: ${response.status} Location not found. Try a city, ZIP code, or address.`);
-//     }
-//      const weatherData = await response.json();
-//      return weatherData
-//     } catch (error) {
-//       console.error(error);
-//     }
-//   }
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status} Location not found. Try a city, ZIP code, or address.`);
+    }
+     const weatherData = await response.json();
+     return weatherData
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
-//for dev only, delete after
-function getWeatherData() {
-    const weatherData = sampleData
-    return weatherData
-}
+//for dev only
+// function getWeatherData() {
+//     const weatherData = sampleData
+//     return weatherData
+// }
 
   function processWeatherData(data) {
       const alerts = getAlert(data)
